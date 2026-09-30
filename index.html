@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071329">
+  <title>RAAT FM — by ArkaaN</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="radio-page">
+
+    <header class="top-bar">
+      <div class="time" id="clock">10:01 PM</div>
+
+      <div class="online-status">
+        <span class="online-dot"></span>
+        <span><strong id="onlineCount">24</strong> online</span>
+      </div>
+
+      <a
+        class="instagram-pill"
+        href="https://www.instagram.com/ark_matics/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Instagram @ark_matics"
+      >
+        <span class="instagram-icon">◎</span>
+        <span>Instagram</span>
+      </a>
+    </header>
+
+    <section class="hero" aria-label="RAAT FM">
+      <div class="hero-content">
+        <div class="title-wrap">
+          <div class="hindi-title">रात</div>
+          <div class="fm-title">FM</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="music-player" aria-label="RAAT FM music player">
+
+      <div class="album-art" aria-hidden="true">
+        <div class="album-art-inner">♪</div>
+      </div>
+
+      <div class="track-information">
+        <h2 id="trackTitle">Midnight Drive</h2>
+        <p id="trackArtist">RAAT FM</p>
+
+        <div class="progress-container">
+          <input
+            id="progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            aria-label="Track progress"
+          >
+
+          <div class="time-display">
+            <span id="currentTime">0:00</span>
+            <span id="duration">3:42</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <button id="previousBtn" class="control" aria-label="Previous song" title="Previous">◀</button>
+        <button id="playBtn" class="control play" aria-label="Play" title="Play">▶</button>
+        <button id="nextBtn" class="control" aria-label="Next song" title="Next">▶</button>
+      </div>
+
+      <div class="player-tools" aria-label="Player tools">
+        <button id="playlistBtn" class="tool-btn" type="button" aria-expanded="false" aria-controls="playlistPanel" title="Playlist">☷</button>
+        <button id="autoplayBtn" class="tool-btn active" type="button" aria-pressed="true" title="Autoplay on">↻</button>
+        <div class="volume-control" title="Volume">
+          <button id="muteBtn" class="tool-btn volume-toggle" type="button" aria-pressed="false" aria-label="Mute" title="Mute">🔊</button>
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+        </div>
+      </div>
+
+      <div id="playlistPanel" class="playlist-panel" hidden>
+        <div class="playlist-heading">
+          <span>RAAT FM — playlist</span>
+          <span id="playlistStatus">3 tracks</span>
+        </div>
+        <div id="playlist" class="playlist"></div>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <span class="footer-hindi">रात</span>
+      <span class="footer-divider"></span>
+      <span class="footer-name">by ArkaaN</span>
+    </footer>
+
+    <audio id="audio" preload="metadata"></audio>
+
+    <div class="sr-only" aria-live="polite" id="playerAnnouncement"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
